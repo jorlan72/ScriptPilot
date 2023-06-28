@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D9E13725-D967-4CBA-B5E2-3977C9825C16}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="scriptomatic.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="scriptomatic">
+        <MSBuild Projects="scriptomatic.dproj"/>
+    </Target>
+    <Target Name="scriptomatic:Clean">
+        <MSBuild Projects="scriptomatic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="scriptomatic:Make">
+        <MSBuild Projects="scriptomatic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="scriptomatic"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="scriptomatic:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="scriptomatic:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
