@@ -745,15 +745,32 @@ procedure RunConnectSSH;
      frmMain.sshclient01.Password := VarToStr(ExcelParam03);
        try
          try
-         frmMain.sshclient01.Connect;
-         except
-         on E: Exception do
-         begin
-           LogItStamp('ERROR: Could not connect to SSH host ' + VarToStr(ExcelParam01) + ' - If welcome banner received, check username and password', 0);
+           frmMain.sshclient01.Connect;
+            except
+              on E: Exception do
+                begin
+                  if Pos('Authentication failed', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Authentication failed. Please check username and password.', 0);
+                    exit;
+                  end
+                   else if Pos('A connection attempt failed because the connected party did not properly respond after a period of time', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Authentication failed. Please check username and password.', 0);
+                    exit;
+                  end
+                  else if Pos('Connection closed', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Connection closed unexpectedly.', 0);
+                    exit;
+                  end
+                  else if Pos('Connection refused', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Connection refused by the host.', 0);
+                    exit;
+                  end
+                  else
+                   LogItStamp('ERROR: SSH host not responding. Error: ' + E.Message, 0);
+                end;
          end;
-         end;
-       finally
-         frmMain.TimerSSH.Enabled := false;
+          finally
+           frmMain.TimerSSH.Enabled := False;
        end;
      if frmMain.sshclient01.Connected then frmMain.sshshell01.Connect;
      if frmMain.sshclient01.connected then frmMain.sshshell01.WriteString('' + #13#10);
@@ -769,49 +786,78 @@ begin
  LogItStamp('Disconnecting SSH',0);
 end;
 
-Procedure RunWaitForConnectionSSH;
+procedure RunWaitForConnectionSSH;
 var
- AreWeAtMax : Integer;
+  AreWeAtMax: Integer;
 begin
- AreWeAtMax := 0;
-   if frmMain.sshclient01.Connected then LogItStamp('ERROR: SSH connection to another host already active. Ignoring command at row ' + inttostr(CurrentRow),0);
-   if frmMain.sshclient01.Connected then exit;
-   LogItStamp('Trying SSH connection to host ' + ExcelParam01 + ' with loop interval of ' + inttostr(timeout) + ' seconds',0);
-   LogItStamp('Click the Stop button to abort',0);
-   if MaxTimeout > 0 then LogItStamp('Max retry time set to ' + inttostr(MaxTimeout) + ' seconds',0);
-         if MaxTimeout <= Timeout then begin
-           LogItStamp('ERROR: Max retry time set lower than the connection time in settings. Adjusting to 180 seconds',0);
-           MaxTimeout := 180;
-         end;
-    while not frmMain.sshclient01.Connected do begin
-       if StopPressed then exit;
-         frmMain.TimerSSH.Enabled := true;
-         frmMain.sshclient01.HostName := VarToStr(ExcelParam01);
-         frmMain.sshclient01.User := VarToStr(ExcelParam02);
-         frmMain.sshclient01.Password := VarToStr(ExcelParam03);
-        try
-           try
-            frmMain.sshclient01.Connect;
-           except
-            on E: Exception do
-            begin
-              LogItStamp('SSH host not ready yet. Retrying in ' + inttostr(timeout) + ' seconds - If welcome banner received, check username and password',0);
-            end;
-           end;
-         finally
-         frmMain.TimerSSH.Enabled := false;
-        end;
-       if frmMain.sshclient01.Connected then LogItStamp('SSH connected to host ' + ExcelParam01 + ' with user ' + ExcelParam02,0);
-       if frmMain.sshclient01.Connected then frmMain.sshshell01.Connect;
-       if frmMain.sshclient01.connected then frmMain.sshshell01.WriteString('' + #13#10);
-       if frmMain.sshclient01.Connected then Chill(ChillTime);
-       Inc(AreWeAtMax, Timeout);
-         if AreWeAtMax >= MaxTimeout then begin
-          LogItStamp('Will not try again. Max retry time reached. Script will continue',0);
-          exit;
-         end;
-       if not frmMain.sshclient01.Connected then Chill(Timeout);
+  AreWeAtMax := 0;
+  if frmMain.sshclient01.Connected then
+  begin
+    LogItStamp('ERROR: SSH connection to another host already active. Ignoring command at row ' + IntToStr(CurrentRow), 0);
+    Exit;
+  end;
+  LogItStamp('Trying SSH connection to host ' + ExcelParam01 + ' with loop interval of ' + IntToStr(timeout) + ' seconds', 0);
+  LogItStamp('Click the Stop button to abort', 0);
+  if MaxTimeout > 0 then
+    LogItStamp('Max retry time set to ' + IntToStr(MaxTimeout) + ' seconds', 0);
+  if MaxTimeout <= Timeout then
+  begin
+    LogItStamp('ERROR: Max retry time set lower than the connection time in settings. Adjusting to 180 seconds', 0);
+    MaxTimeout := 180;
+  end;
+  while not frmMain.sshclient01.Connected do
+  begin
+    if StopPressed then
+      Exit;
+    frmMain.TimerSSH.Enabled := True;
+    frmMain.sshclient01.HostName := VarToStr(ExcelParam01);
+    frmMain.sshclient01.User := VarToStr(ExcelParam02);
+    frmMain.sshclient01.Password := VarToStr(ExcelParam03);
+    try
+      try
+        frmMain.sshclient01.Connect;
+      except
+        on E: Exception do
+         begin
+                  if Pos('Authentication failed', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Authentication failed. Please check username and password.', 0);
+                    exit;
+                  end
+                   else if Pos('A connection attempt failed because the connected party did not properly respond after a period of time', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Authentication failed. Please check username and password.', 0);
+                    exit;
+                  end
+                  else if Pos('Connection closed', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Connection closed unexpectedly.', 0);
+                    exit;
+                  end
+                  else if Pos('Connection refused', E.Message) > 0 then begin
+                    LogItStamp('ERROR: Connection refused by the host.', 0);
+                    exit;
+                  end
+                  else
+                   LogItStamp('ERROR: SSH host not responding. Error: ' + E.Message, 0);
+                end;
+      end;
+    finally
+      frmMain.TimerSSH.Enabled := False;
     end;
+    if frmMain.sshclient01.Connected then
+    begin
+      LogItStamp('SSH connected to host ' + ExcelParam01 + ' with user ' + ExcelParam02, 0);
+      frmMain.sshshell01.Connect;
+      frmMain.sshshell01.WriteString('' + #13#10);
+      Chill(ChillTime);
+    end;
+    Inc(AreWeAtMax, Timeout);
+    if AreWeAtMax >= MaxTimeout then
+    begin
+      LogItStamp('Will not try again. Max retry time reached. Script will continue', 0);
+      Exit;
+    end;
+    if not frmMain.sshclient01.Connected then
+      Chill(Timeout);
+  end;
 end;
 
 Procedure RunWaitForSeconds;
@@ -836,19 +882,27 @@ begin
 end;
 
 Procedure RunSSHCommand;
+var
+ SendExtraShit : Boolean;
 begin
+SendExtraShit := true;
+if vartostr(ExcelParam02) <> '' then SendExtraShit := false;
 verbose := false;
   if not frmMain.sshclient01.Connected then begin
    LogItStamp('ERROR: Skipping command at row ' + inttostr(CurrentRow) + '. SSH not connected',0);
   end else begin
-   frmMain.sshshell01.WriteString(vartostr(ExcelParam01) + #13#10);
+   If SendExtraShit then frmMain.sshshell01.WriteString(vartostr(ExcelParam01) + #13#10) else frmMain.sshshell01.WriteString(vartostr(ExcelParam01) + #13);
    LogItStamp('Sending SSH command "' + vartostr(ExcelParam01) + '" to connected host',0);
    chill(ChillTime);
   end;
 end;
 
 Procedure RunSSHCommandVerbose;
+var
+ SendExtraShit : Boolean;
 begin
+SendExtraShit := true;
+if vartostr(ExcelParam02) <> '' then SendExtraShit := false;
   if not frmMain.sshclient01.Connected then begin
    LogItStamp('ERROR: Skipping command at row ' + inttostr(CurrentRow) + '. SSH not connected',0);
   end else begin
@@ -857,7 +911,7 @@ begin
    LogItStamp('Sending SSH Verbose command "' + vartostr(ExcelParam01) + '" to connected host',0);
    LogItStamp('Displaying data returned from host:',1);
    sshinputstring := '';
-   frmMain.sshshell01.WriteString(vartostr(ExcelParam01) + #13#10);
+   If SendExtraShit then frmMain.sshshell01.WriteString(vartostr(ExcelParam01) + #13#10) else frmMain.sshshell01.WriteString(vartostr(ExcelParam01) + #13);
    chill(ChillTime);
   end;
 Verbose := false;

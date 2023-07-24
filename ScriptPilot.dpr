@@ -16,7 +16,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Wedgewood Light');
+  TStyleManager.TrySetStyle('Smokey Quartz Kamri');
   Application.Title := 'ScriptoMatic';
   Application.CreateForm(TFrmMain, FrmMain);
   Application.CreateForm(TfrmVariable, frmVariable);
