@@ -4,8 +4,8 @@ object FrmMain: TFrmMain
   Top = 77
   Margins.Bottom = 12
   Caption = 'ScriptPilot'
-  ClientHeight = 695
-  ClientWidth = 1238
+  ClientHeight = 696
+  ClientWidth = 1242
   Color = clBtnFace
   Constraints.MinHeight = 750
   Constraints.MinWidth = 1250
@@ -15,7 +15,6 @@ object FrmMain: TFrmMain
   Font.Name = 'Tahoma'
   Font.Style = []
   GlassFrame.Enabled = True
-  GlassFrame.SheetOfGlass = True
   Icon.Data = {
     0000010009000000000001002000176B00009600000080800000010020002808
     0100AD6B00006060000001002000A8940000D573010048480000010020008854
@@ -5942,20 +5941,20 @@ object FrmMain: TFrmMain
   object StatusBar: TStatusBar
     AlignWithMargins = True
     Left = 3
-    Top = 673
-    Width = 1232
+    Top = 674
+    Width = 1236
     Height = 19
     Panels = <>
     SimplePanel = True
     ExplicitTop = 669
-    ExplicitWidth = 1230
+    ExplicitWidth = 1228
   end
   object CardPanelLeft: TCardPanel
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 622
-    Height = 664
+    Width = 478
+    Height = 665
     Align = alLeft
     ActiveCard = CardMenu
     BevelOuter = bvNone
@@ -5964,16 +5963,17 @@ object FrmMain: TFrmMain
     object CardWelcomeLeft: TCard
       Left = 0
       Top = 0
-      Width = 622
-      Height = 664
+      Width = 478
+      Height = 665
       Caption = 'CardWelcomeLeft'
       CardIndex = 0
       TabOrder = 1
+      ExplicitHeight = 660
       object ImageFrontPageLogo: TImage
         AlignWithMargins = True
         Left = 60
         Top = 100
-        Width = 559
+        Width = 415
         Height = 256
         Margins.Left = 60
         Margins.Top = 100
@@ -6414,9 +6414,9 @@ object FrmMain: TFrmMain
       end
       object LabelFrontPageCodeRed: TLabel
         AlignWithMargins = True
-        Left = 387
-        Top = 542
-        Width = 215
+        Left = 3
+        Top = 543
+        Width = 455
         Height = 19
         Margins.Right = 20
         Align = alBottom
@@ -6428,12 +6428,15 @@ object FrmMain: TFrmMain
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 387
+        ExplicitTop = 542
+        ExplicitWidth = 215
       end
       object LabelFrontPageBuild: TLabel
         AlignWithMargins = True
-        Left = 387
-        Top = 567
-        Width = 215
+        Left = 3
+        Top = 568
+        Width = 455
         Height = 19
         Margins.Right = 20
         Align = alBottom
@@ -6445,12 +6448,15 @@ object FrmMain: TFrmMain
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 387
+        ExplicitTop = 567
+        ExplicitWidth = 215
       end
       object LabelCounter: TLabel
         AlignWithMargins = True
-        Left = 292
-        Top = 592
-        Width = 310
+        Left = 3
+        Top = 593
+        Width = 455
         Height = 19
         Margins.Right = 20
         Margins.Bottom = 30
@@ -6463,29 +6469,33 @@ object FrmMain: TFrmMain
         Font.Name = 'Calibri Light'
         Font.Style = [fsItalic]
         ParentFont = False
+        ExplicitLeft = 292
+        ExplicitTop = 592
+        ExplicitWidth = 310
       end
       object Label1: TLabel
         AlignWithMargins = True
         Left = 3
         Top = 399
-        Width = 528
-        Height = 90
+        Width = 472
+        Height = 65
         Margins.Top = 40
         Align = alTop
         Alignment = taCenter
         Caption = 'ScriptPilot'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -80
+        Font.Height = -60
         Font.Name = 'Courier New'
-        Font.Style = [fsBold]
+        Font.Style = []
         ParentFont = False
+        ExplicitWidth = 396
       end
       object CBWelcomeStartup: TCheckBox
         AlignWithMargins = True
         Left = 30
-        Top = 644
-        Width = 589
+        Top = 645
+        Width = 445
         Height = 17
         Margins.Left = 30
         Align = alBottom
@@ -6494,14 +6504,15 @@ object FrmMain: TFrmMain
         State = cbChecked
         TabOrder = 0
         OnClick = CBWelcomeStartupClick
+        ExplicitTop = 640
       end
     end
     object CardMenu: TCard
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 616
-      Height = 658
+      Width = 472
+      Height = 659
       Caption = 'CardMenu'
       CardIndex = 1
       Font.Charset = DEFAULT_CHARSET
@@ -6511,12 +6522,11 @@ object FrmMain: TFrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitHeight = 654
       object LabelTaskInformation: TLabel
         AlignWithMargins = True
         Left = 20
         Top = 250
-        Width = 576
+        Width = 432
         Height = 19
         Hint = 'Task description'
         Margins.Left = 20
@@ -6538,7 +6548,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 3
         Top = 15
-        Width = 610
+        Width = 466
         Height = 70
         Margins.Top = 15
         Align = alTop
@@ -6555,7 +6565,7 @@ object FrmMain: TFrmMain
           AlignWithMargins = True
           Left = 12
           Top = 30
-          Width = 586
+          Width = 442
           Height = 27
           Hint = 'Select what project to work on from the drop-down list'
           Margins.Left = 10
@@ -6580,7 +6590,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 3
         Top = 167
-        Width = 610
+        Width = 466
         Height = 70
         Align = alTop
         Caption = ' Select task to perform '
@@ -6596,7 +6606,7 @@ object FrmMain: TFrmMain
           AlignWithMargins = True
           Left = 12
           Top = 30
-          Width = 586
+          Width = 442
           Height = 27
           Hint = 'Select what task to work on from the drop-down list'
           Margins.Left = 10
@@ -6620,7 +6630,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 3
         Top = 91
-        Width = 610
+        Width = 466
         Height = 70
         Align = alTop
         Caption = ' Select data element '
@@ -6636,7 +6646,7 @@ object FrmMain: TFrmMain
           AlignWithMargins = True
           Left = 12
           Top = 30
-          Width = 586
+          Width = 442
           Height = 27
           Hint = 'Select what data to work on from the drop-down list'
           Margins.Left = 10
@@ -6660,9 +6670,9 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 3
         Top = 322
-        Width = 338
+        Width = 369
         Height = 138
-        Margins.Right = 275
+        Margins.Right = 100
         Align = alTop
         Caption = ' Select action '
         Font.Charset = DEFAULT_CHARSET
@@ -6702,7 +6712,7 @@ object FrmMain: TFrmMain
           AlignWithMargins = True
           Left = 13
           Top = 91
-          Width = 311
+          Width = 342
           Height = 25
           Hint = 'Shows the script progress when being executed'
           Margins.Left = 11
@@ -6716,14 +6726,12 @@ object FrmMain: TFrmMain
       object PanelLogo: TPanel
         AlignWithMargins = True
         Left = 3
-        Top = 516
-        Width = 338
+        Top = 517
+        Width = 369
         Height = 139
         Hint = 'ScriptoMatic - CodeRed 2023 - Jorgen Lanesskog'
-        Margins.Right = 275
+        Margins.Right = 100
         Align = alBottom
-        BevelInner = bvRaised
-        BevelKind = bkTile
         BevelOuter = bvNone
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -6732,13 +6740,12 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         TabOrder = 4
-        ExplicitTop = 512
         object ImageLogo: TImage
           AlignWithMargins = True
-          Left = 11
-          Top = 4
+          Left = 10
+          Top = 3
           Width = 128
-          Height = 127
+          Height = 133
           Margins.Left = 10
           Align = alLeft
           Center = True
@@ -6933,6 +6940,7 @@ object FrmMain: TFrmMain
           Proportional = True
           Stretch = True
           ExplicitLeft = 4
+          ExplicitTop = 4
           ExplicitHeight = 128
         end
         object LabelAppName: TLabel
@@ -6977,8 +6985,8 @@ object FrmMain: TFrmMain
         end
       end
       object MemoContent: TMemo
-        Left = 392
-        Top = 559
+        Left = 271
+        Top = 466
         Width = 204
         Height = 36
         TabStop = False
@@ -7039,31 +7047,28 @@ object FrmMain: TFrmMain
   end
   object CardPanelRight: TCardPanel
     AlignWithMargins = True
-    Left = 631
+    Left = 487
     Top = 3
-    Width = 604
-    Height = 664
+    Width = 752
+    Height = 665
     Align = alClient
     ActiveCard = CardLog
     BevelEdges = []
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitWidth = 602
-    ExplicitHeight = 660
     object CardWelcomeRight: TCard
       Left = 0
       Top = 0
-      Width = 604
-      Height = 664
+      Width = 752
+      Height = 665
       Caption = 'CardWelcomeRight'
       CardIndex = 0
       TabOrder = 4
-      ExplicitWidth = 602
       object LabelFP05: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 312
-        Width = 517
+        Width = 672
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7080,12 +7085,13 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 517
       end
       object LabelFP04: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 240
-        Width = 505
+        Width = 672
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7102,12 +7108,13 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 505
       end
       object LabelFP03: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 168
-        Width = 521
+        Width = 672
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7124,12 +7131,13 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 521
       end
       object LabelFP02: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 96
-        Width = 489
+        Width = 672
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7146,12 +7154,13 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 489
       end
       object LabelFP01: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 50
-        Width = 506
+        Width = 672
         Height = 26
         Margins.Left = 40
         Margins.Top = 50
@@ -7166,12 +7175,13 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 506
       end
       object ButtonStart: TButton
         AlignWithMargins = True
         Left = 100
-        Top = 534
-        Width = 402
+        Top = 535
+        Width = 552
         Height = 110
         Margins.Left = 100
         Margins.Right = 100
@@ -7190,8 +7200,8 @@ object FrmMain: TFrmMain
       object ButtonDocumentaion: TButton
         AlignWithMargins = True
         Left = 100
-        Top = 401
-        Width = 402
+        Top = 402
+        Width = 552
         Height = 110
         Margins.Left = 100
         Margins.Right = 100
@@ -7212,29 +7222,25 @@ object FrmMain: TFrmMain
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 598
-      Height = 658
+      Width = 746
+      Height = 659
       Caption = 'CardLog'
       CardIndex = 1
       TabOrder = 0
-      ExplicitWidth = 596
-      ExplicitHeight = 654
       object GroupBoxLog: TGroupBox
         AlignWithMargins = True
         Left = 3
         Top = 119
-        Width = 592
-        Height = 536
+        Width = 740
+        Height = 537
         Align = alClient
         Caption = ' Log '
         TabOrder = 0
-        ExplicitWidth = 590
-        ExplicitHeight = 532
         object LabelScriptActiveRow: TLabel
           AlignWithMargins = True
           Left = 22
-          Top = 510
-          Width = 548
+          Top = 511
+          Width = 696
           Height = 14
           Hint = 'Shows current command being executed'
           Margins.Left = 20
@@ -7251,14 +7257,15 @@ object FrmMain: TFrmMain
           ParentFont = False
           Visible = False
           WordWrap = True
+          ExplicitTop = 510
           ExplicitWidth = 133
         end
         object MemoLog: TMemo
           AlignWithMargins = True
           Left = 12
           Top = 27
-          Width = 568
-          Height = 470
+          Width = 716
+          Height = 471
           Hint = 'Shows messages and output from running scripts'
           Margins.Left = 10
           Margins.Top = 12
@@ -7274,26 +7281,23 @@ object FrmMain: TFrmMain
           ReadOnly = True
           ScrollBars = ssBoth
           TabOrder = 0
-          ExplicitWidth = 566
-          ExplicitHeight = 466
         end
       end
       object GroupBoxInformation: TGroupBox
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 592
+        Width = 740
         Height = 110
         Align = alTop
         Caption = ' Information '
         TabOrder = 1
         Visible = False
-        ExplicitWidth = 590
         object LabelInformation: TLabel
           AlignWithMargins = True
           Left = 12
           Top = 18
-          Width = 568
+          Width = 716
           Height = 26
           Margins.Left = 10
           Margins.Right = 10
@@ -7313,7 +7317,7 @@ object FrmMain: TFrmMain
           AlignWithMargins = True
           Left = 12
           Top = 50
-          Width = 568
+          Width = 716
           Height = 55
           Margins.Left = 10
           Margins.Right = 10
@@ -7332,18 +7336,17 @@ object FrmMain: TFrmMain
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 598
-      Height = 658
+      Width = 746
+      Height = 659
       Caption = 'CardVariables'
       CardIndex = 2
       TabOrder = 1
-      ExplicitWidth = 596
       object ValueListEditorVariables: TValueListEditor
         AlignWithMargins = True
         Left = 10
         Top = 10
-        Width = 576
-        Height = 638
+        Width = 726
+        Height = 639
         Margins.Left = 10
         Margins.Top = 10
         Margins.Right = 10
@@ -7371,17 +7374,16 @@ object FrmMain: TFrmMain
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 598
-      Height = 658
+      Width = 746
+      Height = 659
       Caption = 'CardVariableInput'
       CardIndex = 3
       TabOrder = 2
-      ExplicitWidth = 596
       object LabelAskForInput: TLabel
         AlignWithMargins = True
         Left = 10
         Top = 40
-        Width = 562
+        Width = 726
         Height = 66
         Margins.Left = 10
         Margins.Top = 40
@@ -7398,40 +7400,50 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 562
       end
       object GroupBoxInput: TGroupBox
         AlignWithMargins = True
         Left = 3
         Top = 129
-        Width = 590
-        Height = 526
+        Width = 740
+        Height = 527
         Align = alClient
         TabOrder = 0
         object ValueListEditorInput: TValueListEditor
           AlignWithMargins = True
           Left = 12
           Top = 27
-          Width = 566
-          Height = 342
+          Width = 716
+          Height = 343
           Hint = 'Enter the required variable data for this task'
           Margins.Left = 10
           Margins.Top = 12
           Margins.Right = 10
           Margins.Bottom = 5
           Align = alClient
+          DefaultRowHeight = 25
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 0
           TitleCaptions.Strings = (
             'Input we need'
             'Values you need to enter')
+          ExplicitWidth = 708
+          ExplicitHeight = 338
           ColWidths = (
             278
-            280)
+            432)
         end
         object ButtonContinue: TButton
           AlignWithMargins = True
           Left = 102
-          Top = 394
-          Width = 386
+          Top = 395
+          Width = 536
           Height = 110
           Hint = 'Click to continue'
           Margins.Left = 100
@@ -7448,24 +7460,25 @@ object FrmMain: TFrmMain
           ParentFont = False
           TabOrder = 1
           OnClick = ButtonContinueClick
+          ExplicitTop = 390
+          ExplicitWidth = 528
         end
       end
     end
     object CardMessageImage: TCard
       Left = 0
       Top = 0
-      Width = 604
-      Height = 664
+      Width = 752
+      Height = 665
       BorderWidth = 1
       Caption = 'CardMessageImage'
       CardIndex = 4
       TabOrder = 3
-      ExplicitWidth = 602
       object LabelMessageImage: TLabel
         AlignWithMargins = True
         Left = 4
         Top = 21
-        Width = 240
+        Width = 744
         Height = 33
         Margins.Top = 20
         Margins.Bottom = 20
@@ -7479,13 +7492,14 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
+        ExplicitWidth = 240
       end
       object MessageImage: TImage
         AlignWithMargins = True
         Left = 4
         Top = 77
-        Width = 594
-        Height = 433
+        Width = 744
+        Height = 434
         Align = alClient
         Center = True
         Proportional = True
@@ -7498,8 +7512,8 @@ object FrmMain: TFrmMain
       object ButtonMessageImageContinue: TButton
         AlignWithMargins = True
         Left = 101
-        Top = 533
-        Width = 400
+        Top = 534
+        Width = 550
         Height = 110
         Hint = 'Click to continue'
         Margins.Left = 100
@@ -7522,18 +7536,17 @@ object FrmMain: TFrmMain
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 598
-      Height = 658
+      Width = 746
+      Height = 659
       Caption = 'CardVersionHistory'
       CardIndex = 5
       TabOrder = 5
-      ExplicitWidth = 596
       object GroupBoxVersionHistory: TGroupBox
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 590
-        Height = 652
+        Width = 740
+        Height = 653
         Align = alClient
         Caption = ' Version history '
         TabOrder = 0
@@ -7541,8 +7554,8 @@ object FrmMain: TFrmMain
           AlignWithMargins = True
           Left = 12
           Top = 27
-          Width = 566
-          Height = 611
+          Width = 716
+          Height = 612
           Hint = 'Shows messages and output from running scripts'
           Margins.Left = 10
           Margins.Top = 12
@@ -7565,8 +7578,8 @@ object FrmMain: TFrmMain
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 598
-      Height = 658
+      Width = 746
+      Height = 659
       Caption = 'CardSelector'
       CardIndex = 6
       TabOrder = 6
@@ -7574,7 +7587,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 3
         Top = 20
-        Width = 592
+        Width = 740
         Height = 33
         Margins.Top = 20
         Margins.Bottom = 20
@@ -7594,8 +7607,8 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 20
         Top = 93
-        Width = 558
-        Height = 27
+        Width = 706
+        Height = 31
         Hint = 'Select from the dropdown menu'
         Margins.Left = 20
         Margins.Top = 20
@@ -7605,7 +7618,7 @@ object FrmMain: TFrmMain
         DropDownCount = 10
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -19
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -7616,8 +7629,8 @@ object FrmMain: TFrmMain
       object ButtonSelectorContinue: TButton
         AlignWithMargins = True
         Left = 100
-        Top = 528
-        Width = 398
+        Top = 529
+        Width = 546
         Height = 110
         Hint = 'Click to continue'
         Margins.Left = 100
@@ -7634,13 +7647,12 @@ object FrmMain: TFrmMain
         ParentFont = False
         TabOrder = 1
         OnClick = ButtonSelectorContinueClick
-        ExplicitWidth = 396
       end
     end
   end
   object MainMenu: TMainMenu
-    Left = 558
-    Top = 422
+    Left = 870
+    Top = 326
     object MenuFile: TMenuItem
       Caption = '&File'
       Hint = 'Select from the menu'
@@ -7769,13 +7781,13 @@ object FrmMain: TFrmMain
   end
   object TimerOpening: TTimer
     OnTimer = TimerOpeningTimer
-    Left = 418
-    Top = 566
+    Left = 674
+    Top = 446
   end
   object ApplicationEvents: TApplicationEvents
     OnHint = ApplicationEventsHint
-    Left = 436
-    Top = 334
+    Left = 996
+    Top = 198
   end
   object sshclient01: TScSSHClient
     Timeout = 4
@@ -7783,8 +7795,8 @@ object FrmMain: TFrmMain
     KeyStorage = ScMemoryStorage1
     OnBanner = sshclient01Banner
     OnServerKeyValidate = sshclient01ServerKeyValidate
-    Left = 489
-    Top = 398
+    Left = 657
+    Top = 326
   end
   object sshshell01: TScSSHShell
     Client = sshclient01
@@ -7793,26 +7805,26 @@ object FrmMain: TFrmMain
     Timeout = 4
     TerminalInfo.Cols = 130
     TerminalInfo.Rows = 64
-    Left = 503
-    Top = 486
+    Left = 967
+    Top = 310
   end
   object ScMemoryStorage1: TScMemoryStorage
     StoreUserPassword = False
-    Left = 462
-    Top = 262
+    Left = 742
+    Top = 198
   end
   object TimerSSH: TTimer
     Enabled = False
     Interval = 100
     OnTimer = TimerSSHTimer
-    Left = 390
-    Top = 270
+    Left = 646
+    Top = 190
   end
   object Ping: TipwPing
     Timeout = 0
     OnResponse = PingResponse
-    Left = 446
-    Top = 486
+    Left = 1046
+    Top = 438
   end
   object TelnetClient01: TTnCnx
     Port = '23'
@@ -7821,13 +7833,13 @@ object FrmMain: TFrmMain
     LocalEcho = False
     SocketFamily = sfAny
     OnDataAvailable = TelnetClient01DataAvailable
-    Left = 390
-    Top = 414
+    Left = 782
+    Top = 334
   end
   object SysLog: TipwSysLog
     RemoteHost = '255.255.255.255'
     SSLCertStore = 'MY'
-    Left = 510
-    Top = 326
+    Left = 886
+    Top = 206
   end
 end

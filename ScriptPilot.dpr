@@ -16,7 +16,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Smokey Quartz Kamri');
+  TStyleManager.TrySetStyle('Calypso');
   Application.Title := 'ScriptoMatic';
   Application.CreateForm(TFrmMain, FrmMain);
   Application.CreateForm(TfrmVariable, frmVariable);
