@@ -5946,8 +5946,8 @@ object FrmMain: TFrmMain
     Height = 19
     Panels = <>
     SimplePanel = True
-    ExplicitTop = 669
-    ExplicitWidth = 1228
+    ExplicitTop = 673
+    ExplicitWidth = 1232
   end
   object CardPanelLeft: TCardPanel
     AlignWithMargins = True
@@ -5959,7 +5959,7 @@ object FrmMain: TFrmMain
     ActiveCard = CardMenu
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitHeight = 660
+    ExplicitHeight = 664
     object CardWelcomeLeft: TCard
       Left = 0
       Top = 0
@@ -6414,9 +6414,9 @@ object FrmMain: TFrmMain
       end
       object LabelFrontPageCodeRed: TLabel
         AlignWithMargins = True
-        Left = 3
+        Left = 243
         Top = 543
-        Width = 455
+        Width = 215
         Height = 19
         Margins.Right = 20
         Align = alBottom
@@ -6428,15 +6428,12 @@ object FrmMain: TFrmMain
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 387
-        ExplicitTop = 542
-        ExplicitWidth = 215
       end
       object LabelFrontPageBuild: TLabel
         AlignWithMargins = True
-        Left = 3
+        Left = 243
         Top = 568
-        Width = 455
+        Width = 215
         Height = 19
         Margins.Right = 20
         Align = alBottom
@@ -6448,15 +6445,12 @@ object FrmMain: TFrmMain
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 387
-        ExplicitTop = 567
-        ExplicitWidth = 215
       end
       object LabelCounter: TLabel
         AlignWithMargins = True
-        Left = 3
+        Left = 148
         Top = 593
-        Width = 455
+        Width = 310
         Height = 19
         Margins.Right = 20
         Margins.Bottom = 30
@@ -6469,15 +6463,12 @@ object FrmMain: TFrmMain
         Font.Name = 'Calibri Light'
         Font.Style = [fsItalic]
         ParentFont = False
-        ExplicitLeft = 292
-        ExplicitTop = 592
-        ExplicitWidth = 310
       end
       object Label1: TLabel
         AlignWithMargins = True
         Left = 3
         Top = 399
-        Width = 472
+        Width = 396
         Height = 65
         Margins.Top = 40
         Align = alTop
@@ -6489,7 +6480,6 @@ object FrmMain: TFrmMain
         Font.Name = 'Courier New'
         Font.Style = []
         ParentFont = False
-        ExplicitWidth = 396
       end
       object CBWelcomeStartup: TCheckBox
         AlignWithMargins = True
@@ -6522,6 +6512,7 @@ object FrmMain: TFrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitHeight = 658
       object LabelTaskInformation: TLabel
         AlignWithMargins = True
         Left = 20
@@ -6740,6 +6731,7 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         TabOrder = 4
+        ExplicitTop = 516
         object ImageLogo: TImage
           AlignWithMargins = True
           Left = 10
@@ -7056,6 +7048,8 @@ object FrmMain: TFrmMain
     BevelEdges = []
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 748
+    ExplicitHeight = 664
     object CardWelcomeRight: TCard
       Left = 0
       Top = 0
@@ -7068,7 +7062,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 40
         Top = 312
-        Width = 672
+        Width = 648
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7085,13 +7079,12 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 517
       end
       object LabelFP04: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 240
-        Width = 672
+        Width = 635
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7108,14 +7101,13 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 505
       end
       object LabelFP03: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 168
-        Width = 672
-        Height = 52
+        Width = 593
+        Height = 26
         Margins.Left = 40
         Margins.Top = 10
         Margins.Right = 40
@@ -7131,13 +7123,12 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 521
       end
       object LabelFP02: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 96
-        Width = 672
+        Width = 630
         Height = 52
         Margins.Left = 40
         Margins.Top = 10
@@ -7154,13 +7145,12 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 489
       end
       object LabelFP01: TLabel
         AlignWithMargins = True
         Left = 40
         Top = 50
-        Width = 672
+        Width = 506
         Height = 26
         Margins.Left = 40
         Margins.Top = 50
@@ -7175,7 +7165,6 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 506
       end
       object ButtonStart: TButton
         AlignWithMargins = True
@@ -7227,6 +7216,8 @@ object FrmMain: TFrmMain
       Caption = 'CardLog'
       CardIndex = 1
       TabOrder = 0
+      ExplicitWidth = 742
+      ExplicitHeight = 658
       object GroupBoxLog: TGroupBox
         AlignWithMargins = True
         Left = 3
@@ -7236,6 +7227,8 @@ object FrmMain: TFrmMain
         Align = alClient
         Caption = ' Log '
         TabOrder = 0
+        ExplicitWidth = 736
+        ExplicitHeight = 536
         object LabelScriptActiveRow: TLabel
           AlignWithMargins = True
           Left = 22
@@ -7257,7 +7250,6 @@ object FrmMain: TFrmMain
           ParentFont = False
           Visible = False
           WordWrap = True
-          ExplicitTop = 510
           ExplicitWidth = 133
         end
         object MemoLog: TMemo
@@ -7281,6 +7273,8 @@ object FrmMain: TFrmMain
           ReadOnly = True
           ScrollBars = ssBoth
           TabOrder = 0
+          ExplicitWidth = 712
+          ExplicitHeight = 470
         end
       end
       object GroupBoxInformation: TGroupBox
@@ -7293,6 +7287,7 @@ object FrmMain: TFrmMain
         Caption = ' Information '
         TabOrder = 1
         Visible = False
+        ExplicitWidth = 736
         object LabelInformation: TLabel
           AlignWithMargins = True
           Left = 12
@@ -7383,7 +7378,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 10
         Top = 40
-        Width = 726
+        Width = 691
         Height = 66
         Margins.Left = 10
         Margins.Top = 40
@@ -7400,7 +7395,6 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 562
       end
       object GroupBoxInput: TGroupBox
         AlignWithMargins = True
@@ -7478,7 +7472,7 @@ object FrmMain: TFrmMain
         AlignWithMargins = True
         Left = 4
         Top = 21
-        Width = 744
+        Width = 240
         Height = 33
         Margins.Top = 20
         Margins.Bottom = 20
@@ -7492,7 +7486,6 @@ object FrmMain: TFrmMain
         Font.Style = []
         ParentFont = False
         WordWrap = True
-        ExplicitWidth = 240
       end
       object MessageImage: TImage
         AlignWithMargins = True

@@ -16,7 +16,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Calypso');
+  TStyleManager.TrySetStyle('Windows10 BlackPearl');
   Application.Title := 'ScriptoMatic';
   Application.CreateForm(TFrmMain, FrmMain);
   Application.CreateForm(TfrmVariable, frmVariable);

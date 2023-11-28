@@ -527,11 +527,14 @@ begin
   until NotepadHandle <> 0;
   // Bring the new Notepad instance to the foreground
   SetForegroundWindow(NotepadHandle);
-  // Get the handle of the Edit control inside Notepad
-  EditHandle := FindWindowEx(NotepadHandle, 0, 'Edit', nil);
+  // Attempt to get the handle of the Edit control for Windows 11
+  EditHandle := FindWindowEx(NotepadHandle, 0, 'RichEdit', nil);
+  // Fallback to the Windows 10 class name if necessary
+  if EditHandle = 0 then
+    EditHandle := FindWindowEx(NotepadHandle, 0, 'Edit', nil);
   if EditHandle = 0 then
   begin
-    raise Exception.Create('Unable to find Notepad Edit control.');
+    ShowMessage('Windows 11 has a new rich edit Notepad that is not supported by ScriptPilot.');
     Exit;
   end;
   // Copy the text from the Memo to the clipboard
@@ -1188,11 +1191,14 @@ begin
   until NotepadHandle <> 0;
   // Bring the new Notepad instance to the foreground
   SetForegroundWindow(NotepadHandle);
-  // Get the handle of the Edit control inside Notepad
-  EditHandle := FindWindowEx(NotepadHandle, 0, 'Edit', nil);
+  // Attempt to get the handle of the Edit control for Windows 11
+  EditHandle := FindWindowEx(NotepadHandle, 0, 'RichEdit', nil);
+  // Fallback to the Windows 10 class name if necessary
+  if EditHandle = 0 then
+    EditHandle := FindWindowEx(NotepadHandle, 0, 'Edit', nil);
   if EditHandle = 0 then
   begin
-    raise Exception.Create('Unable to find Notepad Edit control.');
+    ShowMessage('Windows 11 has a new rich edit Notepad that is not supported by ScriptPilot.');
     Exit;
   end;
   // Copy the text from the ValueListEditor to the clipboard

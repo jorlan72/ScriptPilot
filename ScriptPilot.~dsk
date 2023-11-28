@@ -1,23 +1,23 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\snippets.pas',0,1,37,1,1,0,0,,
-File_1=TSourceModule,'C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\ScriptoMatic\dprocess.pas',0,1,46,19,53,0,0,,
-File_2=TSourceModule,'C:\Program Files (x86)\Embarcadero\Studio\Indy-master\Lib\core\IdSocks.pas',0,1,1027,119,1034,0,0,,
+File_0=TSourceModule,'C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\ScriptoMatic\dprocess.pas',0,1,46,19,53,0,0,,
+File_1=TSourceModule,'C:\Program Files (x86)\Embarcadero\Studio\Indy-master\Lib\core\IdSocks.pas',0,1,1027,119,1034,0,0,,
+File_2=TSourceModule,'C:\Program Files (x86)\Embarcadero\Studio\Indy-master\Lib\core\IdIPAddress.pas',0,1,269,1,286,0,0,,
 
 [Modules]
-Module0=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\engine.pas
-Module1=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\main.pas
+Module0=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\main.pas
+Module1=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\ScriptPilot.dproj
 Count=2
 EditWindowCount=1
-
-[C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\engine.pas]
-ModuleType=TSourceModule
 
 [C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\main.pas]
 ModuleType=TSourceModule
 
+[C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\ScriptPilot.dproj]
+ModuleType=TBaseProject
+
 [EditWindow0]
 ViewCount=2
-CurrentEditView=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\engine.pas
+CurrentEditView=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\main.pas
 View0=0
 View1=1
 PercentageSizes=1
@@ -49,25 +49,25 @@ BottomMiddelPanelData=0000080001020200000009000000446F636B5369746530100000004772
 
 [View0]
 CustomEditViewType=TEditView
+Module=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\ScriptPilot.dpr
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\ScriptPilot.dpr
+
+[View1]
+CustomEditViewType=TEditView
 Module=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\main.pas
 CursorX=1
-CursorY=882
-TopLine=49
+CursorY=822
+TopLine=819
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\main.pas
-
-[View1]
-CustomEditViewType=TEditView
-Module=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\engine.pas
-CursorX=1
-CursorY=1
-TopLine=796
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\SP Origin\ScriptPilot 1\engine.pas
 
 [Watches]
 Count=0
@@ -213,6 +213,11 @@ LRDockWidth=2083
 Dockable=1
 StayOnTop=0
 SplitPos=232
+
+[PropInspDesignerSelection]
+ArrangeBy=Name
+SelectedItem=Authentication,OnServerKeyValidate
+ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,CustomTitleBar=0,Font=0,GlassFrame=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,Touch=0,Options=0,StyleElements=0,BevelEdges=0,HorzScrollBar=0,Client=0,TerminalInfo=1,Client.HttpOptions=0,Client.KeyStorage=0,"Client.LiveBindings Designer=0",Client.Options=0,Client.ProxyOptions=0,KeyStorage=0,HttpOptions=1,ProxyOptions=0,"KeyStorage.LiveBindings Designer=0","KeyStorage.LiveBindings Designer.Element Layers=0"
 
 [frmDesignPreview]
 PercentageSizes=1
